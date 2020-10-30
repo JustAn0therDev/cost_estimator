@@ -63,7 +63,7 @@ if __name__ == '__main__':
     cost_estimator.set_estimated_salary(float(input('Insira seu salário atual ou estimado: ')))
     cost_estimator.set_only_weekends(input('Vai trabalhar apenas nos finais de semana? (s/n) ').lower())
     cost_estimator.set_months(float(input('Insira a estimativa de meses para terminar o projeto (sem "gordura"): ')))
-    if cost_estimator.days_per_week > 2:
+    if not cost_estimator.only_weekends:
         cost_estimator.set_days_per_week(input('Vai trabalhar tambem nos finais de semana? '))
 
     cost_estimator.calculate_final_costs()
